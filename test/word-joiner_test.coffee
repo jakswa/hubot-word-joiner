@@ -10,10 +10,9 @@ describe 'hello-world', ->
       respond: sinon.spy()
       hear: sinon.spy()
 
-    require('../src/hello-world')(@robot)
-
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
+    require('../src/word-joiner')(@robot)
 
   it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+    expect(@robot.hear).to.have.been.calledWith sinon.match( (val) ->
+      val.test 'woo oops'
+    )
