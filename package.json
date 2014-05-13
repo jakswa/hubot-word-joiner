@@ -1,7 +1,7 @@
 {
   "name": "hubot-word-joiner",
   "description": "This script seizes opportunities to join words into newer, hopefully better words",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Jake Swanson <jakswa@gmail.com>",
   "license": "MIT",
 
