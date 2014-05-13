@@ -4,6 +4,32 @@ This script seizes opportunities to join words into newer, hopefully better word
 
 [![Build Status](https://travis-ci.org/jakswa/hubot-word-joiner.png)](https://travis-ci.org/jakswa/hubot-word-joiner)
 
+## Usage
+
+If hubot sees someone use two words that have matching ends, it will join them for you.
+
+For example:
+- nice celery => 'nicelery'
+- ion onboard => 'ionboard'
+- onward, arduously => 'onwarduously'
+
+For *not* example:
+- arduously awkward (ends don't match up)
+- is seeing (only 3+ character words)
+- isn't towing (apostrophe will ruin it)
+- has sinuses (must be 2+ letters in common on the ends)
+
+```
+You> i think you have nice celery
+Hubot> nicelery, you mean?
+
+You> it'll join when non-word characters separate, which could be awkward, arduously
+Hubot> awkwarduously, you mean?
+
+You> lion ion onboard
+Hubot> onboard, you mean?
+```
+
 ## Directory Structure
 
 Using the common directory structure for hubot script packages it will be easy
